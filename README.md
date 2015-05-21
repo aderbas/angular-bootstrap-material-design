@@ -3,8 +3,8 @@ Simple project using Bootstrap Material Design
 
 ** Template using Bootstrap Material Design **
 
-- INSTALL
-Dependencies: node, npm, grunt e bower (If already installed skip to step 'RUN')
+- INSTALL<br>
+Dependencies: <b>node</b>, <b>npm</b>, <b>grunt</b> and <b>bower</b> (If already installed skip to step 'RUN')
 <br />
 <div class="highlight highlight-javascript">
 <pre>
