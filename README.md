@@ -26,24 +26,24 @@ $ grunt server
 - DEV
 * Modelo Angular *
 
--/
- <br/>|_dev/
-	|_ index.html
-	|_common/
-		|_ footer.html
-		|_ top-header.html
-	|_images/
-	|_less/
-		|_ main.less
-	|_scripts/
-		|_ app.js
-	|_views/
-		|_cad/
-			|_ cad.html
-			|_ cad.js
-		|_main/
-			|_ main.html
-			|_ main.js
+-/<br/>
+ &nbsp;|_dev/<br/>
+	&nbsp;|_ index.html<br/>
+	&nbsp;|_common/<br/>
+		&nbsp;&nbsp;|_ footer.html<br/>
+		&nbsp;&nbsp;|_ top-header.html<br/>
+	&nbsp;|_images/<br/>
+	&nbsp;|_less/<br/>
+		&nbsp;&nbsp;|_ main.less<br/>
+	&nbsp;|_scripts/<br/>
+		&nbsp;&nbsp;|_ app.js<br/>
+	&nbsp;|_views/<br/>
+		&nbsp;&nbsp;|_cad/<br/>
+			&nbsp;&nbsp;&nbsp;|_ cad.html<br/>
+		&nbsp;&nbsp;&nbsp;|_ cad.js<br/>
+		&nbsp;|_main/
+			&nbsp;|_ main.html<br/>
+			&nbsp;|_ main.js<br/>
 
 Todos as telas do app irão ficar dentro de 'views', para criar uma nova view basta criar uma pasta com seu arquivo html e js. Só ver o padão da pasta 'cad'. Veja o arquivo 'scripts/app.js', nele tem todas as rotas do ngRouter e a declaração dos Controllers. Requer conhecimento em Angular < https://angularjs.org/ >
 
