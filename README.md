@@ -1,6 +1,10 @@
 # angular-bootstrap-material-design
 Simple project using Bootstrap Material Design
 
+<div style="text-align:center;">
+
+</div>
+
 ** Template using Bootstrap Material Design **
 
 - INSTALL<br>
