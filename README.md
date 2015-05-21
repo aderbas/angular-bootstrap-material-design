@@ -1,10 +1,10 @@
 # angular-bootstrap-material-design
 Simple project using Bootstrap Material Design
 
-** Template base usando o Bootstrap Material Design **
+** Template using Bootstrap Material Design **
 
-- INSTALAÇÃO
-Dependências: node, npm, grunt e bower (Se já estiver instalado pule para o passo 'EXECUTAR')
+- INSTALL
+Dependencies: node, npm, grunt e bower (If already installed skip to step 'RUN')
 <br />
 <div class="highlight highlight-javascript">
 <pre>
@@ -17,11 +17,11 @@ $ sudo npm install -g grunt-cli
 </pre>
 </div>
 
-- EXECUTAR
-Depois de descompactar a versão desejada (angular ou static) abra o terminal e navegue até a pasta que foi descompactado. Em ambas as versões será criada uma pasta 'dist' que é o que irá para servidor de produção.
+- RUN
+After unpacking the desired version (angular or static) open a terminal and navigate to the folder you unzipped. In both versions will be created a folder 'dist' which is what goes to production server.
 <div class="highlight highlight-javascript">
 <pre>
-$ cd caminho/decompactado/static
+$ cd path/unpacking/static
 $ bower install
 $ npm install
 $ grunt build
@@ -30,7 +30,7 @@ $ grunt server
 </div>
 
 - DEV
-* Modelo Angular *
+* Angular Model *
 <div class="highlight highlight-javascript">
 <pre>
 -/
@@ -41,22 +41,25 @@ $ grunt server
 		|_ top-header.html
 	|_images/
 	|_less/
-		|_ main.less
+		|_ main.less // all less
 	|_scripts/
-		|_ app.js
+		|_ app.js // modules
+		|_ index.js // index Controller
+		|_ nav-top.js // implementation of module 'NavTopMenu'
+		|_ router-config.js // all router config
 	|_views/
 		|_cad/
 			|_ cad.html
-			|_ cad.js
+			|_ cad.js // own implementation of Controller
 		|_main/
 			|_ main.html
 			|_ main.js
 </pre>
 </div>
 
-Todos as telas do app irão ficar dentro de 'views', para criar uma nova view basta criar uma pasta com seu arquivo html e js. Só ver o padão da pasta 'cad'. Veja o arquivo 'scripts/app.js', nele tem todas as rotas do ngRouter e a declaração dos Controllers. Requer conhecimento em Angular < https://angularjs.org/ >
+All the app screens will stay within 'views', to create a new view simply create a folder with your html file and js. Only see the default folder 'cad'. See the file 'scripts/router-config.js', it has all routes of ngRouter
 
-* Modelo Static *
+* Static Model *
 <div class="highlight highlight-javascript">
 <pre>
 -/
@@ -68,9 +71,9 @@ Todos as telas do app irão ficar dentro de 'views', para criar uma nova view ba
 		|_ top-header.html
 	|_images/
 	|_less/
-		|_ main.less
+		|_ main.less // all less
 	|_scripts/
-		|_ app.js
+		|_ app.js // any javascript
 </pre>
 </div>
 
@@ -78,6 +81,7 @@ Todas as outras sub páginas ficam na raiz. Só usar como base o arquivo static.
 
 
 * Referências *
+<pre>
 Bootstrap Material Design
 https://fezvrasta.github.io/bootstrap-material-design/
 Components
@@ -92,6 +96,7 @@ Less
 http://lesscss.org/
 Bower
 http://bower.io/
+</pre>
 
 
 
