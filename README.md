@@ -5,13 +5,13 @@ Simple project using Bootstrap Material Design
 
 - INSTALAÇÃO
 Dependências: node, npm, grunt e bower (Se já estiver instalado pule para o passo 'EXECUTAR')
-
-$ sudo apt-get update
-$ sudo apt-get install -y nodejs
-$ sudo apt-get install -y build-essential npm
-$ sudo ln -s /usr/bin/nodejs /usr/bin/node
-$ sudo npm install -g bower
-$ sudo npm install -g grunt-cli
+<br />
+$ sudo apt-get update<br />
+$ sudo apt-get install -y nodejs<br />
+$ sudo apt-get install -y build-essential npm<br />
+$ sudo ln -s /usr/bin/nodejs /usr/bin/node<br />
+$ sudo npm install -g bower<br />
+$ sudo npm install -g grunt-cli<br />
 
 - EXECUTAR
 Depois de descompactar a versão desejada (angular ou static) abra o terminal e navegue até a pasta que foi descompactado. Em ambas as versões será criada uma pasta 'dist' que é o que irá para servidor de produção.
