@@ -17,7 +17,7 @@ $ sudo npm install -g grunt-cli
 </pre>
 </div>
 
-- RUN
+- RUN<br>
 After unpacking the desired version (angular or static) open a terminal and navigate to the folder you unzipped. In both versions will be created a folder 'dist' which is what goes to production server.
 <div class="highlight highlight-javascript">
 <pre>
