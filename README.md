@@ -27,7 +27,7 @@ $ grunt server
 * Modelo Angular *
 
 -/
- |_dev/
+ \n|_dev/
 	|_ index.html
 	|_common/
 		|_ footer.html
