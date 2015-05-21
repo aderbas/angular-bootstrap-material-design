@@ -30,7 +30,8 @@ $ grunt server
 </div>
 
 - DEV<br>
--- Angular Model
+
+-- Angular version
 <div class="highlight highlight-javascript">
 <pre>
 -/
@@ -59,7 +60,7 @@ $ grunt server
 
 All the app screens will stay within 'views', to create a new view simply create a folder with your html file and js. Only see the default folder 'cad'. See the file 'scripts/router-config.js', it has all routes of ngRouter
 
--- Static Model
+-- Static version
 <div class="highlight highlight-javascript">
 <pre>
 -/
@@ -78,6 +79,24 @@ All the app screens will stay within 'views', to create a new view simply create
 </div>
 
 All other sub pages are at the root. Only use based on the file static.html
+
+-- PHP version
+<div class="highlight highlight-javascript">
+<pre>
+-/
+ |_dev/
+	|_ index.php
+	|_ static.php
+	|_common/
+		|_ footer.html
+		|_ top-header.html
+	|_images/
+	|_less/
+		|_ main.less // all less
+	|_scripts/
+		|_ app.js // any javascript
+</pre>
+</div>
 
 * References
 <pre>
