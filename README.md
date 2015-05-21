@@ -2,7 +2,6 @@
 Simple project using Bootstrap Material Design
 
 <div style="text-align:center;">
-![](https://raw.githubusercontent.com/aderbas/angular-bootstrap-material-design/master/print.png)
 </div>
 
 ** Template using Bootstrap Material Design **
