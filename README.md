@@ -1,7 +1,8 @@
 # angular-bootstrap-material-design
-Simple project using Bootstrap Material Design
 
-** Template using Bootstrap Material Design **
+![Alt text](https://raw.githubusercontent.com/aderbas/angular-bootstrap-material-design/master/print.png "Print")
+
+<p>Simple project layout using Bootstrap Material Design</p>
 
 - INSTALL<br>
 Dependencies: <b>node</b>, <b>npm</b>, <b>grunt</b> and <b>bower</b> (If already installed skip to step 'RUN')
