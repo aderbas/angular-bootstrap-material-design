@@ -2,7 +2,6 @@
 Simple project using Bootstrap Material Design
 
 ** Template base usando o Bootstrap Material Design **
-** Autor: Aderbal Nunes <aderbalnunes@gmail.com>    **
 
 - INSTALAÇÃO
 Dependências: node, npm, grunt e bower (Se já estiver instalado pule para o passo 'EXECUTAR')
