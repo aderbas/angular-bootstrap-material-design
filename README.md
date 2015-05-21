@@ -1,6 +1,10 @@
 # angular-bootstrap-material-design
 Simple project using Bootstrap Material Design
 
+<div style="text-align:center;">
+<img scr="//i.imgur.com/JTRanNt.png"/>
+</div>
+
 ** Template using Bootstrap Material Design **
 
 - INSTALL<br>
