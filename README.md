@@ -29,7 +29,7 @@ $ grunt server
 </pre>
 </div>
 
-- DEV
+- DEV<br>
 -- Angular Model
 <div class="highlight highlight-javascript">
 <pre>
@@ -79,7 +79,7 @@ All the app screens will stay within 'views', to create a new view simply create
 
 All other sub pages are at the root. Only use based on the file static.html
 
-* Referências *
+* References
 <pre>
 Bootstrap Material Design
 https://fezvrasta.github.io/bootstrap-material-design/
@@ -96,8 +96,4 @@ http://lesscss.org/
 Bower
 http://bower.io/
 </pre>
-
-
-
-
 
