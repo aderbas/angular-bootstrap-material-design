@@ -2,7 +2,7 @@
 Simple project using Bootstrap Material Design
 
 <div style="text-align:center;">
-![alt tag](https://i.imgur.com/JTRanNt.png)
+
 </div>
 
 ** Template using Bootstrap Material Design **
