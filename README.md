@@ -16,11 +16,11 @@ $ sudo npm install -g grunt-cli<br />
 - EXECUTAR
 Depois de descompactar a versão desejada (angular ou static) abra o terminal e navegue até a pasta que foi descompactado. Em ambas as versões será criada uma pasta 'dist' que é o que irá para servidor de produção.
 
-$ cd caminho/decompactado/static
-$ bower install
-$ npm install
-$ grunt build
-$ grunt server
+$ cd caminho/decompactado/static<br>
+$ bower install<br>
+$ npm install<br>
+$ grunt build<br>
+$ grunt server<br>
 
 - DEV
 * Modelo Angular *
