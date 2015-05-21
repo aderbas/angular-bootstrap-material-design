@@ -1,4 +1,5 @@
 var global = {
+  mainless: 'dev/less/main.less',
   path: {
     less    : 'dev/less',
     css     : 'dist/css',
@@ -6,7 +7,21 @@ var global = {
     js      : 'dist/js',
     scripts : 'dev/scripts'
   },
-  mainless: 'dev/less/main.less'
+  // bower
+  bower: {
+    include: [
+      'jquery',
+      'bootstrap-material-design', 
+      'bootstrap', 
+      'angular', 
+      'angular-route'
+    ],
+    dependencies: {
+      'bootstrap-material-design' : 'jquery',
+      'bootstrap' : 'jquery',
+      'angular-route' : 'angular'      
+    }
+  }
 };
 
 module.exports = function(grunt) {
@@ -18,14 +33,10 @@ module.exports = function(grunt) {
     pkg          : grunt.file.readJSON('package.json'),
     // BOWER CONCAT, CREATE LIB
     bower_concat : {
-      libs: {
+      production: {
         dest    : '<%= config.path.jslib %>/lib.js',
-        include : ['jquery','bootstrap-material-design', 'bootstrap', 'angular', 'angular-route'],
-        dependencies: {
-          'bootstrap-material-design' : 'jquery',
-          'bootstrap' : 'jquery',
-          'angular-route' : 'angular'
-        }
+        include : global.bower.include,
+        dependencies: global.bower.dependencies        
       }
     },  
     // LESS
@@ -77,7 +88,7 @@ module.exports = function(grunt) {
       dist: {
         files: {
           '<%=config.path.js%>/app.<%=pkg.version%>.min.js': ['<%= concat.dist.dest %>'],
-          'dist/js/lib/lib.min.js': '<%= bower_concat.libs.dest %>' // <-- bower_concat
+          'dist/js/lib/lib.min.js': '<%= bower_concat.production.dest %>' // <-- bower_concat
         }
       }
     },
@@ -97,16 +108,16 @@ module.exports = function(grunt) {
         options: {
           replacements: [{
             pattern: /<% @importjs (.*?) %>/ig,
-            replacement: '<script src="js/app.<%=pkg.version%>.js"></script>'
+            replacement: '<script src="js/app.<%=pkg.version%>.min.js"></script>'
           }]
         }        
       },
-      dist:{
+      dev:{
         files: [{'dist/index.html': 'dist/index.html'}],        
         options: {
           replacements: [{
             pattern: /<% @importjs (.*?) %>/ig,
-            replacement: '<script src="js/app.<%=pkg.version%>.min.js"></script>'
+            replacement: '<script src="js/app.<%=pkg.version%>.js"></script>'
           }]
         }        
       }
@@ -148,7 +159,14 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('server', 'Server App', ['connect:server', 'watch']);
-  grunt.registerTask('live', 'Run changes', ['concat','htmlcompressor','string-replace:procuction','less']);
-  grunt.registerTask('build', ['bower_concat','less','concat','copy','htmlcompressor','string-replace:dist','uglify']);
-  grunt.registerTask('test', ['string-replace', 'htmlcompressor']);
+  grunt.registerTask('live', 'Run changes', ['concat','htmlcompressor','string-replace:dev','less']);
+  grunt.registerTask('build', 'Build version', [
+    'bower_concat',
+    'less',
+    'concat',
+    'copy',
+    'htmlcompressor',
+    'string-replace:procuction',
+    'uglify'
+  ]);
 }
