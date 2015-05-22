@@ -7,5 +7,6 @@
   // Nav top bar
   angular.module('NavTopMenu', []);
   // app contains router config scripts/router-config.js
-  angular.module('MyApp', ['MainApp', 'NavTopMenu']);
+  angular.module('MyApp', ['MainApp', 'NavTopMenu'])
+    .factory('$service', core); // core.js
 }());
