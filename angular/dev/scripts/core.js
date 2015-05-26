@@ -16,7 +16,7 @@ function core($http, $location){
           return response.data;
         });        
       },
-      post: function(url, obj){
+      put: function(url, obj){
         return $http.put(url, obj, headers()).then(function(response){
           return response.data;
         });        
