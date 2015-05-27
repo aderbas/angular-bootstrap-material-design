@@ -99,6 +99,13 @@ All other sub pages are at the root. Only use based on the file static.html
 </pre>
 </div>
 
+* Change color base<br>
+To change the base color of your project, change the file .less <code>dev/less/main.less</code>.
+<pre>
+	@primary: <b>@blue-400</b>;
+</pre>
+All colors listed in the documentation: https://goo.gl/mndwWf
+
 * References
 <pre>
 Bootstrap Material Design
