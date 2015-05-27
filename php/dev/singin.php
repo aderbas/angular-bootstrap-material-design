@@ -31,7 +31,7 @@
 
         <div class="togglebutton">
           <label>
-            <input type="checkbox" checked="checked"> Received news
+            <input type="checkbox" checked="checked"> Send me news
           </label>
         </div> 
 
