@@ -4,19 +4,25 @@
 
 <p>Simple project layout using Bootstrap Material Design</p>
 
-- INSTALL<br>
+- INSTALL (Linux)<br>
 Dependencies: <b>node</b>, <b>npm</b>, <b>grunt</b> and <b>bower</b> (If already installed skip to step 'RUN')
 <br />
 <div class="highlight highlight-javascript">
 <pre>
+-- install nodejs
 $ sudo apt-get update
 $ sudo apt-get install -y nodejs
 $ sudo apt-get install -y build-essential npm
+-- if node not found Ubuntu 12.04 / 14.04
 $ sudo ln -s /usr/bin/nodejs /usr/bin/node
+-- install bower and grunt
 $ sudo npm install -g bower
 $ sudo npm install -g grunt-cli
 </pre>
 </div>
+Mac OS: http://goo.gl/l4vSBD<br>
+Windows: http://goo.gl/i0feLy
+
 
 - RUN<br>
 After unpacking the desired version (angular or static) open a terminal and navigate to the folder you unzipped. In both versions will be created a folder 'dist' which is what goes to production server.
