@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html lang="en" ng-app="MainApp"> 
+  <head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css"> 
+    <title>Material Design</title> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <meta name="viewport" content="initial-scale=1" />
+  </head> 
+
+  <body  layout="column" ng-controller="IndexController">
+  <!-- TOP BAR -->
+    <md-toolbar layout="row">
+      <div class="md-toolbar-tools">
+        <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button">
+          <!--md-icon aria-label="Menu" md-svg-icon="images/menu.svg"></md-icon-->
+          Menu
+        </md-button>
+        <h1>Logo</h1>
+      </div>
+    </md-toolbar>
+
+    <div layout="row" flex>
+      <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+        <div ng-include src="common.leftmenu"></div>
+      </md-sidenav>
+      <div layout="column" flex id="content">
+          <md-content layout="column" flex class="md-padding">
+            <ng-view></ng-view>
+          </md-content>
+      </div>
+    </div>
+
+    <script src="js/lib/lib.js"></script>
+    <script src="js/material-angular.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<md-content ng-controller="MenuLeftController">
+  <md-list>
+    <md-list-item ng-click="goTo(item, $event)"  ng-repeat="item in menuList">
+      <label>{{item.title}}</label>
+      <md-divider ng-if="!$last"></md-divider>
+    </md-list-item>
+<!--     <md-list>
+      <md-list-item class="md-1-line" ng-repeat="subitem in item.child"
+        <a href="{{subitem.role}}" >{{subitem.title}}</a>
+        <md-divider ng-if="!$last"></md-divider>
+      </md-list-item>
+    </md-list> -->
+  </md-list>
+</md-content>
