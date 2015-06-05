@@ -1,11 +1,11 @@
-/** core of your app
- request and any config */
+/** core of your app request and any config */
 
 function core($http, $location, $q){
   
   return {
     service: service(),
-    shared: shared()
+    shared: shared(),
+    isLogged: false
   }
 
   //////// methods implementation /////////

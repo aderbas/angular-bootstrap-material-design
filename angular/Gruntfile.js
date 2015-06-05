@@ -57,14 +57,7 @@ module.exports = function(grunt) {
     // CONCAT
     concat : {
       options:{ 
-        separator: ';',
-        // Replace all 'use strict' statements in the code with a single one at the top
-        banner: "(function(){'use strict';\n",
-        process: function(src, filepath) {
-          return '// Source: ' + filepath + '\n' +
-            src.replace(/(^|\n)[ \t]*(\(function\(\){'use strict'|\(function\(\){"use strict");?\s*/g, '$1');
-        },
-        footer: '}()); // -------------- end'         
+        separator: ';'         
       },
       temp: {
         src: ["<%=config.path.scripts%>/**/*.js"],
@@ -75,6 +68,15 @@ module.exports = function(grunt) {
         dest: 'tmp/views.js'
       },
       dist: {
+        options: {
+          // Replace all 'use strict' statements in the code with a single one at the top
+          banner: "(function(){'use strict';\n",
+          process: function(src, filepath) {
+            return '// Source: ' + filepath + '\n' +
+              src.replace(/(^|\n)[ \t]*(\(function\(\){'use strict'|\(function\(\){"use strict");?\s*/g, '$1');
+          },
+          footer: '}()); // ##################### end of App'          
+        },
         src: ['tmp/scripts.js', 'tmp/views.js'],
         dest: '<%=config.path.js%>/app.<%=pkg.version%>.js'
       }      
