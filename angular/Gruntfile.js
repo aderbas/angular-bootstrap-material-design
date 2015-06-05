@@ -59,11 +59,12 @@ module.exports = function(grunt) {
       options:{ 
         separator: ';',
         // Replace all 'use strict' statements in the code with a single one at the top
-        banner: "'use strict';\n",
+        banner: "(function(){'use strict';\n",
         process: function(src, filepath) {
           return '// Source: ' + filepath + '\n' +
-            src.replace(/(^|\n)[ \t]*('use strict'|"use strict");?\s*/g, '$1');
-        }        
+            src.replace(/(^|\n)[ \t]*(\(function\(\){'use strict'|\(function\(\){"use strict");?\s*/g, '$1');
+        },
+        footer: '}()); // -------------- end'         
       },
       temp: {
         src: ["<%=config.path.scripts%>/**/*.js"],
