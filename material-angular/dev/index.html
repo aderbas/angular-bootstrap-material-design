@@ -10,25 +10,24 @@
   </head> 
 
   <body  layout="column" ng-controller="IndexController">
-  <!-- TOP BAR -->
-    <md-toolbar layout="row">
-      <div class="md-toolbar-tools">
-        <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button">
-          <!--md-icon aria-label="Menu" md-svg-icon="images/menu.svg"></md-icon-->
-          Menu
-        </md-button>
-        <h1>Logo</h1>
-      </div>
-    </md-toolbar>
+    <!-- TOP BAR -->
+    <div ng-include src="common.topnav"></div>
 
     <div layout="row" flex>
+      <!-- side bar left -->
       <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
         <div ng-include src="common.leftmenu"></div>
       </md-sidenav>
+      <!-- side bar right -->
+      <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right" is-locked-open="$mdMedia('gt-sm')">
+        <div ng-include src="common.sideright"></div>
+      </md-sidenav>      
+      <!-- content -->    
       <div layout="column" flex id="content">
-          <md-content layout="column" flex class="md-padding">
+        <md-content layout="column" flex class="md-padding">
             <ng-view></ng-view>
-          </md-content>
+        </md-content>
+       <!--  <div ng-include src="common.footer"></div> -->
       </div>
     </div>
 

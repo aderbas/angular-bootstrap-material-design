@@ -1,0 +1,14 @@
+<md-toolbar class="md-theme-light">
+  <h1 class="md-toolbar-tools">{{session.username}}</h1>
+</md-toolbar>
+<md-content  ng-controller="MenuRightController">
+  <md-card>
+    <a href="#" title="Change avatar"><img ng-src="{{session.avatar}}" class="md-card-image" /></a>
+  </md-card>
+  <md-list>
+    <md-list-item  ng-repeat="item in userMenu" ng-click="goTo(item, $event)">
+      <label>{{item.title}}</label>
+      <md-divider ng-if="!$last"></md-divider>
+    </md-list-item>
+  </md-list>  
+</md-content>

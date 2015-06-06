@@ -1,0 +1,12 @@
+<md-toolbar layout="row">
+  <div class="md-toolbar-tools">
+    <md-button class="md-icon-button" hide-gt-sm  ng-click="toggleSidenav('left')">
+      <md-icon aria-label="Menu" md-svg-icon="images/menu.svg"></md-icon>
+    </md-button>
+    <h1>Logo</h1>
+    <span flex></span>
+    <div class="md-avatar">
+      <md-list-item><img src="{{session.avatar}}" width="80px" height="80px" class="md-avatar" ng-click="toggleSidenav('right')"/></md-list-item>
+    </div>
+  </div>
+</md-toolbar>
