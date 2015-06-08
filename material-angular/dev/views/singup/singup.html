@@ -1,14 +1,35 @@
 <h3>Sing up</h3>
-<md-content layout-padding layout="row"> <!-- layout-sm="column" -->
-  
-  <md-input-container>
-    <label>Name</label>
-    <input ng-model="user.name">
-  </md-input-container>
+<md-content layout-padding layout="column"> <!-- layout-sm="column" -->
+  <div flex layout="row">
+    <div flex="30">
+      <md-input-container>
+        <label>Name</label>
+        <input ng-model="user.name">
+      </md-input-container>
 
-  <md-input-container>
-    <label>Email</label>
-    <input ng-model="user.email">
-  </md-input-container>
-  
+      <md-input-container>
+        <label>User name</label>
+        <input ng-model="user.username">
+      </md-input-container>
+
+      <md-input-container>
+        <label>Email</label>
+        <input ng-model="user.email">
+      </md-input-container>
+
+      <md-input-container>
+        <label>Password</label>
+        <input ng-model="user.pwd" type="password">
+      </md-input-container>
+      <md-input-container>
+        <label>Confirm password</label>
+        <input ng-model="user.repwd" type="password">
+      </md-input-container> 
+      <md-button class="md-raised md-primary">Submit</md-button>
+      <md-button class="md-raised">Cancel</md-button>     
+    </div>
+    <div flex>
+      &nbsp;
+    </div>
+  </div>
 </md-content>
